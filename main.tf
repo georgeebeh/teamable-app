@@ -15,12 +15,12 @@ provider "aws" {
 
 
 resource "aws_vpc" "teamable_vpc" {
-    cidr_block = 
+    cidr_block = "10.0.0.0/16"
 }
 
 resource "aws_instance" "teamable_app_server" {
-    ami = 
-    instance_type = 
+    ami = "ami-00874d747dde814fa"
+    instance_type = "t2.micro"
    tags = {
     Name = "teamable_app_server"
    } 
